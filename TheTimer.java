@@ -62,7 +62,7 @@ public class TheTimer implements Runnable{
 	// method uses the AudioSystem suite of classes to play the alarm file.
 	public void playAlarm(){
 		   try {
-		        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("/home/bo/Desktop/Alarm-tone.wav").getAbsoluteFile());
+		        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("Sounds/Twin-bell-alarm-clock-ringing-short.wav").getAbsoluteFile());
 		        Clip clip = AudioSystem.getClip();
 		        clip.open(audioInputStream);
 		        clip.start();

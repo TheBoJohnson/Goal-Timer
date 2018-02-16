@@ -26,7 +26,7 @@ public class Picture {
 		frame = new JFrame();
 		mainPanel = new PicPanel(); 
 		frame.setContentPane(mainPanel);
-		dir = new File("/home/bo/Desktop/Motivations/"); 
+		dir = new File("Pictures/"); 
 		rand = new Random();
 		
 	}
@@ -37,6 +37,15 @@ public class Picture {
 			img = ImageIO.read(listOfPics[rand.nextInt(listOfPics.length)]);
 		}
 		catch(IOException exc){
+			if(dir == null){
+				System.out.println("dir was not initaialized properly");
+			}
+			else{
+				System.out.println(dir.getPath());
+			}
+
+			if(img == null)
+				System.out.println("img is null");
 			
 		}
 		
